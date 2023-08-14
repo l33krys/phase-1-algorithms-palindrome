@@ -1,9 +1,30 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let forward = word
+  let forwardSplit = forward.split('')
+  let reverse = [...forwardSplit].reverse()
+  let reverseWord = reverse.join('')
+  if (forward === reverseWord) {
+    console.log('palindrome')
+    return true
+  } else {
+    console.log('not a palindrome')
+    return false
+  }
+
+  
 }
+
+isPalindrome('racecar')
+isPalindrome('hello')
 
 /* 
   Add your pseudocode here
+  Split word into an array of letters
+  Create a copy non intrusive
+  Flip copy
+  Join array letters into a string
+  Check if original and copy are the same
 */
 
 /*
